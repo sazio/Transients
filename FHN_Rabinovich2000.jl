@@ -11,7 +11,7 @@ function step_G(x)
 end
 
 function fitzhugh_nagumo(du,u,p,t)
-  ### 6D fitzhugh_nagumo system
+  ### 9D fitzhugh_nagumo system
   x_A, y_A,z_A,  x_B, y_B, z_B, x_C, y_C, z_C= u
   τ_1, ν_min, S, a, b, τ_2 = p
 
