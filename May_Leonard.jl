@@ -1,6 +1,6 @@
 using DifferentialEquations
 using Plots; pyplot()
-using Gaston
+
 
 function may_leonard(du,u,p,t)
   ### 3D lotka volterra system
@@ -14,7 +14,7 @@ end
 
 # Defining initial conditions and time
 u0 = [1.5,1.2, 1.0]
-tspan = (0.0,100.0)
+tspan = (0.0,1000.0)
 dt = 0.1
 p = [2.0,0.5,2.0,0.5,2.0,0.5]
 
@@ -41,7 +41,7 @@ savefig("phase_portrait.png")
 anim = @animate for i ∈ 1:size(u_s)[2]
     Plots.quiver(u_s[1,i:end], u_s[2,i:end], u_s[3,i:end], quiver = (du_s1[i:end], du_s2[i:end], du_s3[i:end]))
 end
-gif(anim, "WLC.gif", fps = 15)
+gif(anim, "WLC_long.gif", fps = 15)
 
 # Phase Portrait
 #Plots.quiver(u_s[1,:], u_s[2,:], u_s[3,:], quiver = (du_s1, du_s2, du_s3))

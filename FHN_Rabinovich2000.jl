@@ -51,9 +51,9 @@ plot(sol)
 
 ##### Performing PCA
 
-cioao = fit(PCA, u_s; maxoutdim = 3)
+pca_fit = fit(PCA, u_s; maxoutdim = 3)
 
-result = transform(cioao, u_s)
+result = transform(pca_fit, u_s)
 
 
 # PCA plot

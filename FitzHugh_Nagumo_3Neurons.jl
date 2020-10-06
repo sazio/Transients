@@ -22,9 +22,9 @@ end
 
 # Defining initial conditions and time
 u0 = [1.5,1.2, 1.0, 1.3, 1.1, 1.6]
-tspan = (0.0,10.0)
+tspan = (0.0,100.0)
 dt = 0.1
-p = [0.7,1.5,0.7,1.5]
+p = [1.5,0.3,-0.4,.5]
 
 ## ODE problem, take a look at DifferentialEquation.jl docs
 prob_1 = ODEProblem(fitzhugh_nagumo,u0,tspan,p, saveat =dt )
