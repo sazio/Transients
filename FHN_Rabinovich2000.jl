@@ -1,3 +1,4 @@
+Pkg.add("DifferentialEquations")
 using DifferentialEquations
 using Plots; pyplot()
 using MultivariateStats
@@ -17,7 +18,7 @@ function fitzhugh_nagumo(du,u,p,t)
 
   du[1] = dx_A = (1/τ_1)*(x_A - (x_A*x_A*x_A)/3 - y_A + -z_A*(x_A - ν_min) + 0.35 +S)
   du[2] = dy_A = (x_A - b*y_A + a)
-  du[3] = dz_A = (1/τ_2)*(0 - z_A)
+  du[3] = dz_A = (1/τ_2)*( 2*step_G(x_C) - z_A)
 
   du[4] = dx_B = (1/τ_1)*(x_B - (x_B*x_B*x_B)/3 - y_B + -z_B*(x_B - ν_min) + 0.35 +S)
   du[5] = dy_B = (x_B - b*y_B + a)
@@ -25,14 +26,14 @@ function fitzhugh_nagumo(du,u,p,t)
 
   du[7] = dx_C = (1/τ_1)*(x_C - (x_C*x_C*x_C)/3 - y_C + -z_C*(x_C - ν_min) + 0.35 +S)
   du[8] = dy_C = (x_C - b*y_C + a)
-  du[9] = dz_C = (1/τ_2)*(2*step_G(x_B) + 2*step_G(x_A) -z_C)
+  du[9] = dz_C = (1/τ_2)*(2*step_G(x_B)-z_C)
 end
 
 # Defining initial conditions and time
-# resting state
-#u0 = [-1.2, -0.62, 0, -1.2,-0.62, 0,-1.2,-0.62, 0]
+#u0 = [1.1, 0.78, 0.43, -1.34, 0.55, -0.27, 1.23, -0.67, 0.21]
+#resting state
+u0 = [-1.2, -0.62, 0, -1.2,-0.62, 0,-1.2,-0.62, 0]
 
-u0 = [1.1, 0.78, 0.43, -1.34, 0.55, -0.27, 1.23, -0.67, 0.21]
 tspan = (0.0, 100.0)
 dt = 0.1
 p = [0.08,-1.5,0.15,0.7, 0.8, 3.1]
@@ -62,15 +63,17 @@ plot(result[1,:], result[2,:], result[3,:])
 #plot(u_s[1,:], u_s[3,:], u_s[5,:])
 #savefig("phase_portrait.png")
 
+"""
 dres1 = vcat([result[1, i+1] - result[1,i] for i in 1:size(u_s)[2] -1], 0)
 dres2 = vcat([result[2, i+1] - result[2,i] for i in 1:size(u_s)[2] -1], 0)
 dres3 = vcat([result[3, i+1] - result[3,i] for i in 1:size(u_s)[2] -1], 0)
 
-"""
+
 anim = @animate for i ∈ 1:size(u_s)[2]
     Plots.quiver(result[1,i:end], result[2,i:end], result[3,i:end], quiver = (dres1[i:end], dres2[i:end], dres3[i:end]))
 end
 gif(anim, "WLC_FHN.gif", fps = 15)
-"""
+
 # Phase Portrait
 Plots.quiver(result[1,:], result[2,:], result[3,:], quiver = (dres1, dres2, dres3))
+"""
