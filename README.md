@@ -7,9 +7,9 @@ Under the supervision of André Longtin (University of Ottawa) and Lamberto Rond
 Computing with a dynamical system implies that this system changes its behavior depending on the quality and quantity of the incoming information.
 It is a well-known fact that dissipative networks with symmetric interactions between nodes, operate in a convergent mode, de facto possessing many stable attractors with their basins of attraction likely covering the state space. Such systems can be good models for an associative memory (Hopfield ...). However, computing with attractors makes a very limited use of complex dynamical networks: once an attractor is reached, the "dynamical" nature of the system would no longer be relevant, since wrt the computation, the stytem would now be at a terminal state. The "symmetry assumption" is not only unrealistic in general, but also rule out many possible phenomena and hides many possibilities in their modeling with dynamical systems. 
 
-*Rabinovich et al.* focused they attention on the concept of Winnerless Competition (WLC). WLC itself has been observed in many experiments in hydrodinamics (*Kuppers-Lortz instability* for a large Prandtle number), population biology (*May & Leonard, 1975*) etc.. 
+*Rabinovich et al.* focused their attention on the concept of Winnerless Competition (WLC). WLC itself has been observed in many experiments in hydrodinamics (*Kuppers-Lortz instability* for a large Prandtle number), population biology (*May & Leonard, 1975*) etc.. 
 
-This process can be described by Lotka-Volterra equations (there's a direct connection between Generalized Lotka-Volterra and Rate Models in Neuroscience, see *Rabinovich et al. 2006*), that are well known in population biology and can explain the competition among three species: 
+This process can be described by Lotka-Volterra equations (there's a direct connection between Generalized Lotka-Volterra and Rate Models in Neuroscience, see *Rabinovich et al. 2006*, *Fukai & Tanaka, 1997*), that are well known in population biology and can explain the competition among three species: 
 
 <img src="https://raw.githubusercontent.com/sazio/Transients/master/img/ML3D.png" width="200">
 
