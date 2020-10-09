@@ -17,5 +17,9 @@ The variables x, y, z are the number of individuals for each population at time 
 
 <img src="https://raw.githubusercontent.com/sazio/Transients/master/img/phase_portrait.png" width="600">
 
+And what about the solutions? 
+
+<img src="https://raw.githubusercontent.com/sazio/Transients/master/img/solutions.png" width="600">
+
 
 
