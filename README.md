@@ -1,6 +1,6 @@
 # Transients
 **Transients in Hippocampal Attractor Networks** - Thesis Project, M.Sc. in Physics of Complex Systems (University of Turin)| *Visiting Research Student* at the University of Ottawa.
-Under the supervision of André Longtin (University of Ottawa) and Lamberto Rondoni (University of Turin & Politechnic University of Turin
+Under the supervision of André Longtin (University of Ottawa) and Lamberto Rondoni (University of Turin & Polytechnic University of Turin
 
 ## Intro
 
@@ -10,7 +10,7 @@ This process can be described by Lotka-Volterra equations (there's a direct conn
 
 <img src="https://raw.githubusercontent.com/sazio/Transients/master/img/ML3D.png" width="200">
 
-The variables x, y, z are the number of individuals for each population at time *t*, and \rho_{ij} 
+The variables x, y, z are the number of individuals for each population at time *t*, and $\rho_{ij}$
 
 
 
