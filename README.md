@@ -12,7 +12,7 @@ This process can be described by Lotka-Volterra equations (there's a direct conn
 
 
 
-The variables x, y, z are the number of individuals for each population at time *t*, and <img src="https://render.githubusercontent.com/render/math?math=\rho_{ij}">
+The variables x, y, z are the number of individuals for each population at time *t*, and <img src="https://render.githubusercontent.com/render/math?math=\rho_{ij}"> are competition coefficients measuring how much the *jth* species affects the growth rate of the *ith* species. The non-symmetry of the <img src="https://render.githubusercontent.com/render/math?math=\rho_{ij}"> guarantees the WLC behavior of the above mentioned dynamical system. The phase portrait of such a behavior is a heteroclinic contour (see below)
 
 
 
