@@ -15,12 +15,12 @@ This process can be described by Lotka-Volterra equations (there's a direct conn
 
 
 
-The variables x, y, z are the number of individuals for each population at time *t*, and <img src="https://render.githubusercontent.com/render/math?math=\rho_{ij}"> are competition coefficients measuring how much the *jth* species affects the growth rate of the *ith* species. The non-symmetry of the <img src="https://render.githubusercontent.com/render/math?math=\rho_{ij}"> guarantees the WLC behavior of the above mentioned dynamical system. The phase portrait of such a behavior is a heteroclinic contour (see below)
+The variables x, y, z are the number of individuals for each population at time *t*, and <img src="https://render.githubusercontent.com/render/math?math=\rho_{ij}"> are competition coefficients measuring how much the *jth* species affects the growth rate of the *ith* species. The non-symmetry of the <img src="https://render.githubusercontent.com/render/math?math=\rho_{ij}"> guarantees the WLC behavior of the above mentioned dynamical system. The phase portrait of such a behavior is a heteroclinic contour (see below), there's a sequential switching from saddle point to saddle point.
 
 
 <img src="https://raw.githubusercontent.com/sazio/Transients/master/img/phase_portraitml.png" width="600">
 
-And what about the solutions? 
+And what about the solutions? You can clearly see a sequential switching 
 
 <img src="https://raw.githubusercontent.com/sazio/Transients/master/img/solutions.png" width="600">
 
@@ -43,9 +43,14 @@ I think I've gotten something similar - not that cute but ok-, still trying to u
 <img src="https://raw.githubusercontent.com/sazio/Transients/master/img/phase_portraitFHN.png" width="600">
 
 
-## Some words on 
+## Some words on Winnerless Competition
+
+Competition without a winner is a widely known phenomenon in systems involving more than two interacting agents that satisfies a relationship similar to the voting paradox (Game Theory involved) or the popular game, *rock-paper-scissors*. Such interactions lead to a *nontransitive competition* i.e. a cyclic behavior. The mathematical image of this is a robust heteroclinic cycle which was first formulated in *Busse & Heikes, 1980* in modeling convection in a rotating layer. 
+
+<img src="https://raw.githubusercontent.com/sazio/Transients/master/img/SHC.png" width="600">
 
 
+<img src="" width="600">
 
 
 <img src="" width="600">
