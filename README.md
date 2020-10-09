@@ -13,6 +13,8 @@ Computing with a dynamical system implies that this system changes its behavior 
 
 This process can be described by Lotka-Volterra equations (there's a direct connection between Generalized Lotka-Volterra and Rate Models in Neuroscience, see *Rabinovich et al. 2006*), that are well known in population biology and can explain the competition among three species: 
 
+- <img src="https://latex.codecogs.com/gif.latex?O_t=\text { Onset event at time bin } t " /> 
+
 $\dot{x} = x(1 - x - \rho_{12}y - \rho_{13}z)$
 
 
