@@ -8,6 +8,5 @@ Computing with a dynamical system implies that this system changes its behavior 
 
 This process can be described by Lotka-Volterra equations (there's a direct connection between Generalized Lotka-Volterra and Rate Models in Neuroscience, see *Rabinovich et al. 2006*), that are well known in population biology and can explain the competition among three species: 
 
-![](https://raw.githubusercontent.com/sazio/Transients/master/img/ML3D.png =200x200)
-
+<img src="https://raw.githubusercontent.com/sazio/Transients/master/img/ML3D.png" width="200">
 
