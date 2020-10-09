@@ -40,7 +40,7 @@ I think I've gotten something similar, still trying to understand how Julia's pl
 <img src="https://raw.githubusercontent.com/sazio/Transients/master/img/phase_portraitFHN.png" width="600">
 
 
-
+and
 
 
 
