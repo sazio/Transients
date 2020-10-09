@@ -28,9 +28,10 @@ I've also tried to reproduce a WLC competition with a network of 3 FitzHugh-Nagu
 (Unusual FHN model, with 3 equations instead of 2) 
 
 
-<img src="https://raw.githubusercontent.com/sazio/Transients/master/img/fhn3eqs.png" width="600">
+<img src="https://raw.githubusercontent.com/sazio/Transients/master/img/fhn3eqs.png" width="500">
 
 
+This is the projection of a 9-dimensional heteroclinic orbit of three inhibitory coupled FHN neirons in a 3 Dim space, <img src="https://render.githubusercontent.com/render/math?math=\xi_{i}">s are linear combinations of the actual phase space variables of the system. 
 <img src="https://raw.githubusercontent.com/sazio/Transients/master/img/FHN_9D.png" width="600">
 
 
