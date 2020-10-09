@@ -10,3 +10,7 @@ This process can be described by Lotka-Volterra equations (there's a direct conn
 
 <img src="https://raw.githubusercontent.com/sazio/Transients/master/img/ML3D.png" width="200">
 
+The variables x, y, z are the number of individuals for each population at time *t*, and \rho_{ij} 
+
+
+
