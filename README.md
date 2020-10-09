@@ -52,9 +52,22 @@ Competition without a winner is a widely known phenomenon in systems involving m
 A segment of a stable heteroclinic chain adopted from [Afraimovich et al., 2004]. Each node in the chain represents a saddle possessing both stable and unstable manifolds. Note that the trajectories do not necessarily lead to the saddle node that is being approached; some may slowly pass through its vicinity as the blue and the green paths do. The distance from the state vector to the saddle is proportional to the speed. The chain itself is stable, so that the blue and the green paths wandering in the saddle neighborhoods are not limit cycles; they can be any solution staying in the vicinity of the chain.
 
 
-<img src="" width="600">
+## Unconscious Animal Behaviour
+
+Reproducible sequences are universal objects in unconscious animal behavior. In the course of evolution, sequences are optimized in some sense and became generic for different animals. The search for the food, for example, is a key task for survival and different animals demonstrate pro- totype patterns in the search for their preys. These patterns look like a prescribed combination of rotation and long-range trajectories in a sequential manner. *Dynamical activity of net- works consisting of competitive neurons can explain the emergence of such patterns.* 
+
+Varona et al. 2002, have been working on *Clione Limacina*, a blind molluscan, which possesses a gravity sensory organ, called stratocyst, for orientation. The stratocyst contains a free stone-like mass, called stratolyth, which signals the direction of motion by exciting sensory neurons around it.
+
+At a given time, the animal's locomotion is in one of the two characteristic models: navigation and hunting. 
+In navigation mode, clione's CPG (Central Pattern generator) produces a uniform signal for the actuators (wings and tail) depending on the target's location and the actual direction. In the absence of strong perturbations, such a contro system should generate a uniform control signal (see below). 
+
+On the other hand there's the hunting mode, which triggers a complex dynamics in the pattern generation which produces a sequential control signal for the actuators in order to approach the prey in a non-uniform manner. This sequence, however, cannot be a totally random (or chaotic) signal as such control signal would cause some sort of a *Brownian motion*. In fact, the animal has been shown to follow a prescribed strategy, i.e. a reproducible sequence of switchings, in the hunting mode which can be explained by the **winnerless competition** framework.
 
 
-<img src="" width="600">
-<img src="" width="600">
+<img src="https://github.com/sazio/Transients/blob/master/img/Stratolyth.png" width="600">
+
+
+<img src="https://github.com/sazio/Transients/blob/master/img/sequence.png" width="600">
+
+In the navigation mode, the statolyth excites one sensory neuron (the unique winner, winner-take-all), depending on the moving direction. Due to the inhibitory connections in the sensory network of the statocyst, all other neurons are kept silent (see the first sequence). The winner neuron signals the actual direction of the animal. The brain evaluates this feedback and actuates the wings and tail to maintain the desired movement direction. On the right, in the hunting mode (triggered by an auxiliary signal from the H (hunting) neuron), the inhibitory interaction among sensory neurons conducts a winnerless competition, where sensory neurons fire in a sequence. The switching times may be irregular, but the sequence of the winners is deterministic and reproducible (see the second sequence). When hunting, the effect of the statolyth is ignored, and the robust sequence, as prescribed by the nature in evolution, results in a sequence of actions on the tail and the wings.
 
