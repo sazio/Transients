@@ -30,7 +30,7 @@ u_s = Array(sol)
 plot(sol)
 #savefig("solutions.png")
 plot(u_s[1,:], u_s[2,:], u_s[3,:])
-#savefig("phase_portrait.png")
+savefig("phase_portraitML.png")
 
 
 """
