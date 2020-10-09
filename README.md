@@ -49,6 +49,8 @@ Competition without a winner is a widely known phenomenon in systems involving m
 
 <img src="https://raw.githubusercontent.com/sazio/Transients/master/img/SHC.png" width="600">
 
+A segment of a stable heteroclinic chain adopted from [Afraimovich et al., 2004]. Each node in the chain represents a saddle possessing both stable and unstable manifolds. Note that the trajectories do not necessarily lead to the saddle node that is being approached; some may slowly pass through its vicinity as the blue and the green paths do. The distance from the state vector to the saddle is proportional to the speed. The chain itself is stable, so that the blue and the green paths wandering in the saddle neighborhoods are not limit cycles; they can be any solution staying in the vicinity of the chain.
+
 
 <img src="" width="600">
 
