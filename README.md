@@ -28,23 +28,23 @@ I've also tried to reproduce a WLC competition with a network of 3 FitzHugh-Nagu
 (Unusual FHN model, with 3 equations instead of 2) 
 
 
-<img src="https://raw.githubusercontent.com/sazio/Transients/master/img/fhn3eqs.png" width="500">
+<img src="https://raw.githubusercontent.com/sazio/Transients/master/img/fhn3eqs.png" width="400">
 
 
 This is the projection of a 9-dimensional heteroclinic orbit of three inhibitory coupled FHN neirons in a 3 Dim space, <img src="https://render.githubusercontent.com/render/math?math=\xi_{i}">s are linear combinations of the actual phase space variables of the system. 
 <img src="https://raw.githubusercontent.com/sazio/Transients/master/img/FHN_9D.png" width="600">
 
 
+I think I've gotten something similar, still trying to understand how Julia's plot works but we have 3 "limit" cycles... (there are a few theorems on the birth of a stable limit cycle in the case on an appropriate perturbation, I'm looking through all of those right now)
 
-But I've stumbled in a limit cycle for some reason (there are a few theorems on the birth of a stable limit cycle in the case on an appropriate perturbation, I'm looking trough all of those right now)
-
-
-
+<img src="https://raw.githubusercontent.com/sazio/Transients/master/img/phase_portrait.png" width="600">
 
 
 
 
-<img src="" width="600">
+
+
+
 <img src="" width="600">
 <img src="" width="600">
 
