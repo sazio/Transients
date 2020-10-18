@@ -83,9 +83,9 @@ In Rabinovich et al 2014, a cognitive network architecture that hierarchically c
 
 The concept of chunk has been firstly introduced by *Miller 1956*. The key notion here, was that short-term storaging is not rigid at all but open to strategies that can expand its capacities (e.g. chunking). 
 
-Chunking involves two processes: 1. concatenation of units in a block and 2. segmentation of the blocks. As we've previously said, it is related to the hierarchical organization of perceptual, cognitive or behavioural sequential activity. In motor control (*Rosenbaum et al, 1983*) sequences can consist of subsequences and these can in turn consist of sub-sub-sequences. *Clerget et al. 2013* hypothesize that motor behavior shares some similarities with language, namely that a complex action can be viewed as a chain of subordinate movements, which need to be combined according to certain rules in order to reach a given goal. 
+Chunking involves two processes: 1) concatenation of units in a block and 2) segmentation of the blocks. As we've previously said, it is related to the hierarchical organization of perceptual, cognitive or behavioural sequential activity. In motor control (*Rosenbaum et al, 1983*) sequences can consist of subsequences and these can in turn consist of sub-sub-sequences. *Clerget et al. 2013* hypothesize that motor behavior shares some similarities with language, namely that a complex action can be viewed as a chain of subordinate movements, which need to be combined according to certain rules in order to reach a given goal. 
 
-Here metastability is a key element of transient cognitive dynamics participating in chunking processes. In particular, such dynamics can be represented as a sequential switching between different metastable states (*Rabinovich et al, 2008*)
+Here metastability is a key element of transient cognitive dynamics participating in chunking processes. In particular, such dynamics can be represented as a sequential switching between different metastable states (*Rabinovich et al, 2008a,b*).  
 
 
 ## References 
@@ -100,5 +100,9 @@ Rosenbaum, D. A., Kenny, S. B., and Derr, M. A. (1983). Hierarchical control of 
 Rabinovich, M. I., Varona, P., Tristan, I., Afraimovich, V. S. (2014), Chunking dynamics: heteroclinics in mind, Front. Comput. Neurosci.,  doi: 10.3389/fncom.2014.00022
 
 Rabinovich, M., Huerta, R., and Laurent, G. (2008a). Neuroscience. Transient dynamics for neural processing. Science 321, 48–50. doi: 10.1126/science. 1155564
+
+Rabinovich, M. I., Huerta, R., Varona, P., and Afraimovich, V. S. (2008b). Transient cognitive dynamics, metastability, and decision making. PLoS Comput Biol 4:e1000072. doi: 10.1371/journal.pcbi.1000072
+
+
 
 
