@@ -89,11 +89,11 @@ Here metastability is a key element of transient cognitive dynamics participatin
 
 
 ## References 
-Clerget, E., Andres, M., and Olivier, E. (2013). Deficit in complex sequence process- ing after a virtual lesion of left BA45. PLoS ONE 8:e63722. doi: 10.1371/jour- nal.pone.0063722
+Clerget, E., Andres, M., and Olivier, E. (2013). Deficit in complex sequence processing after a virtual lesion of left BA45. PLoS ONE 8:e63722. doi: 10.1371/journal.pone.0063722
 
 Kiebel, S. J., Friston, K. J. (2012), Recognition of Sequences of Sequences Using Nonlinear Dynamical Systems, Chapter 6 of Principles of Brain Dynamics (Rabinovich, Varona), doi: 10.7551/mitpress/9108.001.0001.
 
-Miller, G. A. (1956). The magical number seven plus or minus two: some lim- its on our capacity for processing information. Psychol. Rev. 63, 81–97. doi: 10.1037/h0043158
+Miller, G. A. (1956). The magical number seven plus or minus two: some limits on our capacity for processing information. Psychol. Rev. 63, 81–97. doi: 10.1037/h0043158
 
 Rosenbaum, D. A., Kenny, S. B., and Derr, M. A. (1983). Hierarchical control of rapid movement sequences. J. Exp. Psychol. Hum. Percept. Perform. 9, 86–102. doi: 10.1037/0096-1523.9.1.86
 
