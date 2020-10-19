@@ -43,7 +43,7 @@ I think I've gotten something similar - not that cute but ok-, still trying to u
 <img src="https://raw.githubusercontent.com/sazio/Transients/master/img/phase_portraitFHN.png" width="600">
 
 
-## Some words on Winnerless Competition
+## Some words on the Winnerless Competition
 
 Competition without a winner is a widely known phenomenon in systems involving more than two interacting agents that satisfies a relationship similar to the voting paradox (Game Theory involved) or the popular game, *rock-paper-scissors*. Such interactions lead to a *nontransitive competition* i.e. a cyclic behavior. The mathematical image of this is a robust heteroclinic cycle which was first formulated in *Busse & Heikes, 1980* in modeling convection in a rotating layer. 
 
