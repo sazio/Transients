@@ -1,0 +1,3 @@
+[deps]
+GalacticOptim = "a75be94c-b780-496d-a8a9-0878b188d577"
+NeuralPDE = "315f7962-48a3-4962-8226-d0f33b1235f0"
