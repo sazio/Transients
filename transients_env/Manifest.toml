@@ -221,10 +221,10 @@ uuid = "459566f4-90b8-5000-8ac3-15dfb0a30def"
 version = "2.14.1"
 
 [[DiffEqFlux]]
-deps = ["Adapt", "BlackBoxOptim", "ConsoleProgressMonitor", "DiffEqBase", "DiffEqSensitivity", "DiffResults", "Distributions", "DistributionsAD", "Flux", "ForwardDiff", "GalacticOptim", "LinearAlgebra", "Logging", "LoggingExtras", "Optim", "Printf", "ProgressLogging", "RecursiveArrayTools", "Requires", "ReverseDiff", "StaticArrays", "TerminalLoggers", "Tracker", "Zygote", "ZygoteRules"]
-git-tree-sha1 = "09a202ef42ffc5943a7ca1683b249e160175b407"
+deps = ["Adapt", "BlackBoxOptim", "ConsoleProgressMonitor", "DiffEqBase", "DiffEqSensitivity", "DiffResults", "Distributions", "DistributionsAD", "Flux", "ForwardDiff", "LinearAlgebra", "Logging", "LoggingExtras", "Optim", "Printf", "ProgressLogging", "RecursiveArrayTools", "Requires", "ReverseDiff", "StaticArrays", "TerminalLoggers", "Tracker", "Zygote", "ZygoteRules"]
+git-tree-sha1 = "a64e3c6eb1c41eeb60f7e91112c7d0a5110acc25"
 uuid = "aae7a2af-3d4f-5e19-a356-7da93b79d9d0"
-version = "1.24.0"
+version = "1.23.0"
 
 [[DiffEqJump]]
 deps = ["ArrayInterface", "Compat", "DataStructures", "DiffEqBase", "FunctionWrappers", "LinearAlgebra", "PoissonRandom", "Random", "RandomNumbers", "RecursiveArrayTools", "StaticArrays", "TreeViews", "UnPack"]
@@ -383,9 +383,9 @@ version = "0.8.3"
 
 [[GalacticOptim]]
 deps = ["ArrayInterface", "ConsoleProgressMonitor", "DiffEqBase", "DiffResults", "FiniteDiff", "Flux", "ForwardDiff", "Logging", "LoggingExtras", "Optim", "Printf", "ProgressLogging", "Reexport", "Requires", "ReverseDiff", "TerminalLoggers", "Tracker", "Zygote"]
-git-tree-sha1 = "68edeb4da2558cc0ddf847ea40fb36032cc3ce6c"
+git-tree-sha1 = "82af077dc2c96c6abd7ef3f6caef7560b58e6e47"
 uuid = "a75be94c-b780-496d-a8a9-0878b188d577"
-version = "0.3.1"
+version = "0.4.1"
 
 [[GenericSVD]]
 deps = ["LinearAlgebra"]
@@ -599,7 +599,7 @@ version = "0.3.4"
 
 [[NeuralPDE]]
 deps = ["Adapt", "CUDA", "Cuba", "Cubature", "DiffEqBase", "DiffEqFlux", "DiffEqNoiseProcess", "DiffEqSensitivity", "Distributions", "Flux", "ForwardDiff", "GalacticOptim", "LinearAlgebra", "ModelingToolkit", "Optim", "Quadrature", "Random", "Reexport", "RuntimeGeneratedFunctions", "Statistics", "StochasticDiffEq", "Tracker", "Zygote"]
-git-tree-sha1 = "4334865ef40641ff3e33b1a033959562f894c16e"
+git-tree-sha1 = "44990eb3d2030bc43efd5b341b0686a94b42cc1f"
 repo-rev = "quadrature_training"
 repo-url = "https://github.com/SciML/NeuralPDE.jl.git"
 uuid = "315f7962-48a3-4962-8226-d0f33b1235f0"
