@@ -15,7 +15,7 @@ using PyPlot
 β = 0.5
 
 
-# 3D PDE
+# 3D PDE - Solution of Liouville's theorem for May-Leonard
 eq  = Dt(u(x,y,t,θ)) +  Dx(u(x,y,t,θ))*((α + β)/2)*x*(1-x-2*y) + Dy(u(x,y,t,θ))*((α + β)/2)*y*(1-2*x-y) ~ 0
 
 

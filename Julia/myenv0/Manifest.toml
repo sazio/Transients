@@ -144,6 +144,11 @@ git-tree-sha1 = "08c8b6831dc00bfea825826be0bc8336fc369860"
 uuid = "861a8166-3701-5b0c-9a16-15d98fcdc6aa"
 version = "1.0.2"
 
+[[CommonSolve]]
+git-tree-sha1 = "68a0743f578349ada8bc911a5cbd5a2ef6ed6d1f"
+uuid = "38540f10-b2f7-11e9-35d8-d573e4eb0ff2"
+version = "0.2.0"
+
 [[CommonSubexpressions]]
 deps = ["MacroTools", "Test"]
 git-tree-sha1 = "7b8a93dba8af7e3b42fecabf646260105ac373f7"
@@ -190,6 +195,30 @@ deps = ["Markdown", "Test"]
 git-tree-sha1 = "f0464e499ab9973b43c20f8216d088b61fda80c6"
 uuid = "adafc99b-e345-5852-983c-f28acb93d879"
 version = "0.2.2"
+
+[[Cuba]]
+deps = ["Cuba_jll", "LinearAlgebra"]
+git-tree-sha1 = "2b928680d07cbc5e59ba3d42ffceecbbfc25faed"
+uuid = "8a292aeb-7a57-582c-b821-06e4c11590b1"
+version = "2.1.0"
+
+[[Cuba_jll]]
+deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
+git-tree-sha1 = "0065dad6944ae58614b6aa4c15c1f7a8c8967a16"
+uuid = "3bed1096-5ab2-53a1-92e2-6c1cc31d0f4b"
+version = "4.2.0+2"
+
+[[Cubature]]
+deps = ["Cubature_jll"]
+git-tree-sha1 = "c3f4b3b38abd7b5c3ccf59adab2568212e7530d3"
+uuid = "667455a9-e2ce-5579-9412-b964f529a492"
+version = "1.5.1"
+
+[[Cubature_jll]]
+deps = ["Libdl", "Pkg"]
+git-tree-sha1 = "152046dc3435d62d8ecab5f0dec9c21b64bb6238"
+uuid = "7bc98958-0e37-5d67-a6ac-a3a19030071a"
+version = "1.0.3+0"
 
 [[DataAPI]]
 git-tree-sha1 = "176e23402d80e7743fc26c19c681bfb11246af32"
@@ -453,6 +482,12 @@ git-tree-sha1 = "03d381f65183cb2d0af8b3425fde97263ce9a995"
 uuid = "42e2da0e-8278-4e71-bc24-59509adca0fe"
 version = "1.0.0"
 
+[[HCubature]]
+deps = ["Combinatorics", "DataStructures", "LinearAlgebra", "QuadGK", "StaticArrays"]
+git-tree-sha1 = "fc4adde0a029bf69c0da3f7c25ca24b5e0e389ed"
+uuid = "19dc6840-f33b-545b-b366-655c7e3ffd49"
+version = "1.4.0"
+
 [[HTTP]]
 deps = ["Base64", "Dates", "IniFile", "MbedTLS", "Sockets"]
 git-tree-sha1 = "c7ec02c4c6a039a98a15f955462cd7aea5df4508"
@@ -669,6 +704,12 @@ git-tree-sha1 = "77ebf555fb5bc7f00dca5ee65cd72c8afcc1cda2"
 uuid = "961ee093-0014-501f-94e3-6117800e7a78"
 version = "4.0.1"
 
+[[MonteCarloIntegration]]
+deps = ["Distributions", "Random"]
+git-tree-sha1 = "949c9e22e12261a25b5b595aa8a946897841193f"
+uuid = "4886b29c-78c9-11e9-0a6e-41e1f4161f7b"
+version = "0.0.1"
+
 [[MuladdMacro]]
 git-tree-sha1 = "c6190f9a7fc5d9d5915ab29f2134421b12d24a68"
 uuid = "46d2c3a1-f734-5fdb-9937-b9b9aeba4221"
@@ -698,10 +739,10 @@ uuid = "77ba4419-2d1f-58cd-9bb1-8ffee604a2e3"
 version = "0.3.4"
 
 [[NeuralPDE]]
-deps = ["Adapt", "CUDA", "DiffEqBase", "DiffEqFlux", "DiffEqNoiseProcess", "DiffEqSensitivity", "Distributions", "Flux", "ForwardDiff", "GalacticOptim", "LinearAlgebra", "ModelingToolkit", "Optim", "Random", "Reexport", "Statistics", "StochasticDiffEq", "Tracker", "Zygote"]
-git-tree-sha1 = "28d825cb26b9f9f540b44a01ecafeb6519e82b46"
-repo-rev = "master"
-repo-url = "https://github.com/sazio/NeuralPDE.jl"
+deps = ["Adapt", "CUDA", "Cuba", "Cubature", "DiffEqBase", "DiffEqFlux", "DiffEqNoiseProcess", "DiffEqSensitivity", "Distributions", "Flux", "ForwardDiff", "GalacticOptim", "LinearAlgebra", "ModelingToolkit", "Optim", "Quadrature", "Random", "Reexport", "RuntimeGeneratedFunctions", "Statistics", "StochasticDiffEq", "Tracker", "Zygote"]
+git-tree-sha1 = "304139a1ef4e7a44e8e757d50f1ec462bbc69f19"
+repo-rev = "quadrature_training"
+repo-url = "https://github.com/SciML/NeuralPDE.jl.git"
 uuid = "315f7962-48a3-4962-8226-d0f33b1235f0"
 version = "2.5.0"
 
@@ -840,6 +881,12 @@ deps = ["DataStructures", "LinearAlgebra"]
 git-tree-sha1 = "12fbe86da16df6679be7521dfb39fbc861e1dc7b"
 uuid = "1fd47b50-473d-5c70-9696-f719f8f3bcdc"
 version = "2.4.1"
+
+[[Quadrature]]
+deps = ["CommonSolve", "DiffEqBase", "Distributions", "ForwardDiff", "HCubature", "LinearAlgebra", "MonteCarloIntegration", "QuadGK", "Reexport", "Requires", "ReverseDiff", "Zygote", "ZygoteRules"]
+git-tree-sha1 = "e5a30da5082a3fbfe41c12c62a9a4d53b9d04ec6"
+uuid = "67601950-bd08-11e9-3c89-fd23fb4432d2"
+version = "1.5.0"
 
 [[QuasiMonteCarlo]]
 deps = ["Distributions", "LatinHypercubeSampling", "LatticeRules", "Sobol"]
