@@ -1,0 +1,22 @@
+Follow these simple steps on an Ubuntu system:
+
+1/ download cvode from https://computation.llnl.gov/casc/sundials/download/download.html
+
+2/./configure CC=gcc CFLAGS=-O3 F77=gfortran FFLAGS=-O3 --enable-examples --libdir=/usr/lib --includedir=/usr/include/
+
+3/ make
+
+4/ As root: make install
+
+5/ ln -s /usr/lib/libsundials_cvode.a /usr/lib/libcvode.a
+
+6/ ln -s /usr/lib/libsundials_nvecserial.a /usr/lib/libcvodeserial.a
+
+5/ Compile simply as 
+
+gcc -O3 -o hcrt hcrt_cvode.c -lm -lcvode -lcvodeserial
+gcc -O3 -o lc LC_SFO.c -lm -lcvode -lcvodeserial
+
+or 
+
+type make
