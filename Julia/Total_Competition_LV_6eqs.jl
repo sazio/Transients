@@ -3,11 +3,11 @@ using Plots;
 using MultivariateStats
 
 
-function Total_LV(du,u,p,t)
+function Total_LV(du,u,p,t, r = 2.5)
   ### Total Compeition Lotka Volterra System --> WLC
   ### In this case we have a map  !!!!!
   ## http://www.math.nthu.edu.tw/~sbhsu/May-Leonard.pdf
-  r = 2.5
+
   q, v, w, x, y, z = u
 
   ρ_12, ρ_13, ρ_14, ρ_15, ρ_16, ρ_21, ρ_23, ρ_24, ρ_25, ρ_26, ρ_31, ρ_32, ρ_34, ρ_35, ρ_36, ρ_41, ρ_42, ρ_43, ρ_45, ρ_46, ρ_51, ρ_52, ρ_53, ρ_54, ρ_56, ρ_61, ρ_62, ρ_63, ρ_64, ρ_65 = p
@@ -31,7 +31,7 @@ dt = 1
 p = [1.05, 1.001, 1.001, 1.001, 0, 0, 1.15, 1.001, 1.001, 1.001, 1.001, 0, 1.14, 1.001, 1.001, 1.001, 1.001, 0, 1.07, 1.001, 1.001, 1.001, 1.001, 0, 1.09, 1.001, 1.001, 1.001, 1.001, 0]
 
 ## ODE problem, take a look at DifferentialEquation.jl docs
-prob = DiscreteProblem(Total_LV,u0,tspan,p, saveat =dt )
+prob = DiscreteProblem(Total_LV,u0,tspan,p, saveat =dt)
 
 #solution
 sol = solve(prob)
@@ -74,6 +74,16 @@ res_time_3 = res_time_vec(u_s[3,:])
 res_time_4 = res_time_vec(u_s[4,:])
 res_time_5 = res_time_vec(u_s[5,:])
 res_time_6 = res_time_vec(u_s[6,:])
+res_time = [res_time_1, res_time_2, res_time_3, res_time_4, res_time_5, res_time_6]
+
+plot(res_time, layout = (3,2))
 
 
-plot(res_time_1)
+
+res_time_1[7] - res_time_1[1]
+
+function diff_res_time(res_time_vec, D = 6)
+
+    delta =1
+
+end
