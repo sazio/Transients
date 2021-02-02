@@ -35,7 +35,7 @@ const κ = 0.5           # relative rate of transmitter binding and unbinding
 const V_rev = -80     # postsynaptic reversal potential (approx 0 mV)
 
 # Injected Current Function
-I_inj(t) = (5 < t) & (t < 30) ? 10 : 0
+I_inj(t) = (5 < t) & (t < 7.5) ? 10 : 0
 
 function HH_model(du,u,p,t)
     n1, m1, h1,  S1, R1, n2, m2, h2, S2, R2, n3, m3, h3,  S3, R3, Vm1, Vm2, Vm3 = u
@@ -93,7 +93,7 @@ function HH_model(du,u,p,t)
 end
 
 ## Run Model:
-u0 = [n_∞(0); m_∞(0) ; h_∞(0);  0.5; 0.5; n_∞(0); m_∞(0) ; h_∞(0);  0.5; 0.5; n_∞(0); m_∞(0) ; h_∞(0);  0.5; 0.5; -65.9; -65.9; -65.9]
+u0 = [n_∞(0); m_∞(0) ; h_∞(0);  0; 0; n_∞(0); m_∞(0) ; h_∞(0);  0; 0; n_∞(0); m_∞(0) ; h_∞(0);  0; 0; -65.9; -65.9; -65.9]
 tspan = (0.0,50.0)
 prob = ODEProblem(HH_model, u0, tspan)
 sol = solve(prob, saveat=0.1)
@@ -106,10 +106,9 @@ p_1 = plot(sol.t, sol[16,:], legend=false, lw=2, ylabel="Voltage [mV]")
 p_2 = plot(sol.t, sol[17,:], legend=false, lw=2, ylabel="Voltage [mV]")
 p_3 = plot(sol.t, sol[18,:], legend=false, lw=2, ylabel="Voltage [mV]")
 
-
-
-
 p_current = plot(sol.t, I_inj.(sol.t), legend=false, lc=:red, lw=2, ylabel="Current")
+
+p_all = plot(sol[16,:], sol[17,:], sol[18,:])
 """
 p3 = plot(sol.t, sol[1:3,:]', label=["n" "m" "h"], legend=:topright, lw=2,
         xlabel="Time [ms]", ylabel="Fraction Active")
