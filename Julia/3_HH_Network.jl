@@ -1,7 +1,7 @@
 using Plots, DifferentialEquations
 
 ## Function Definitions
-α_n(dV) = @. 0.032*(50 - dV)/(exp((-5 - dV)/5)- 1)
+α_n(dV) = @. 0.032*(50 - dV)/(exp((-50 - dV)/5)- 1)
 β_n(dV) = @. 0.5/(exp((-55 - dV)/40))
 
 α_m(dV) = @. 0.32*(-52 - dV)/(exp((-52 - dV)/4) - 1)
@@ -15,24 +15,24 @@ m_∞(dV) = @. α_m(dV)/(α_m(dV)+β_m(dV))
 h_∞(dV) = @. α_h(dV)/(α_h(dV)+β_h(dV))
 
 # Heaviside step function (smooth version)
-const k = 10000
+k = 10000
 𝚯(dV) = @. 1/(1 + exp(-2*k*dV))
 
 ## Constants
-const C_m     = 0.03       # μF/cm², membrane capacitance
-const G_NaMax = 360     # mS/cm², maximum conductivity of Na channel
-const G_KMax  = 70      # mS/cm², maximum conductivity of K channel
-const G_L     = 1.     # mS/cm², leak conductivity
+const C_m     = 0.143       # nF, membrane capacitance
+const G_NaMax = 7.15     # μS, maximum conductivity of Na channel
+const G_KMax  = 1.43      # μS, maximum conductivity of K channel
+const G_L     = 0.02672     # μS, leak conductivity
 #const V_r  = -65        # mV, resting potential
 const V_Na =  50        # mV, Nernst voltage for Na
 const V_K  = -95        # mV, Nernst voltage for K
-const V_L  = -64    # mV, Nernst voltage for leak
+const V_L  = -63.563    # mV, Nernst voltage for leak
 
 const V_th = -20        #mV , threshold potential for transmitter
 const S_max = 0.045     # maximal fraction of postsynaptically bound neurotransmitters
-const τ_syn = 0.05      # 50 ms
+const τ_syn = 50      # 50 ms
 const κ = 0.5           # relative rate of transmitter binding and unbinding
-const V_rev = 61     # postsynaptic reversal potential (approx 0 mV)
+const V_rev = -80     # postsynaptic reversal potential (approx 0 mV)
 
 # Injected Current Function
 I_inj(t) = (5 < t) & (t < 30) ? 10 : 0
@@ -52,9 +52,9 @@ function HH_model(du,u,p,t)
     G_Na2 = G_NaMax * h2 * m2^3
     G_Na3 = G_NaMax * h3 * m3^3
 
-    G12 = G21 = 1 # Synpatic Conductance
-    G13 = G31 = 1
-    G23 = G32 = 1
+    G12 = G21 = 30 # Synpatic Conductance
+    G13 = G31 = 30
+    G23 = G32 = 30
 
     # Update transfer rate coefficients, n, m, and h | neuron 1
     du[1] = α_n(V_diff1)*(1-n1) - β_n(V_diff1)*n1
@@ -102,16 +102,18 @@ sol[16,:]
 
 
 ## Plotting
-p1 = plot(sol.t, sol[16,:], legend=false, lw=2, ylabel="Voltage [mV]")
+p_1 = plot(sol.t, sol[16,:], legend=false, lw=2, ylabel="Voltage [mV]")
 p_2 = plot(sol.t, sol[17,:], legend=false, lw=2, ylabel="Voltage [mV]")
 p_3 = plot(sol.t, sol[18,:], legend=false, lw=2, ylabel="Voltage [mV]")
 
 
 
 
-p2 = plot(sol.t, I_inj.(sol.t), legend=false, lc=:red, lw=2, ylabel="Current")
+p_current = plot(sol.t, I_inj.(sol.t), legend=false, lc=:red, lw=2, ylabel="Current")
+"""
 p3 = plot(sol.t, sol[1:3,:]', label=["n" "m" "h"], legend=:topright, lw=2,
         xlabel="Time [ms]", ylabel="Fraction Active")
 
 l = grid(3, 1, heights=[0.4, 0.2 ,0.4])
 plot(p1, p2, p3, layout = l, size=(800,500))
+"""
