@@ -22,8 +22,16 @@ const V_Na =  50        # mV, Nernst voltage for Na
 const V_K  = -77        # mV, Nernst voltage for K
 const V_L  = -54.387    # mV, Nernst voltage for leak
 
+const V_th = -20        # mV , threshold potential for transmitter
+const S_max = 0.045     # maximal fraction of postsynaptically bound neurotransmitters
+const τ_syn = 50        # ms, synaptic time scale
+const κ = 0.5           # relative rate of transmitter binding and unbinding
+const V_rev = -80     # postsynaptic reversal potential (approx 0 mV)
+
+#const I_stim = 0.08    #nA, stimulus current
+
 # Injected Current Function
-I_inj(t) = (5 < t) & (t < 30) ? 10 : 0
+I_inj(t) = (0 < t) & (t < 10000) ? 10 : 0
 
 function HH_model(du,u,p,t)
     n, m, h, Vm = u
@@ -39,6 +47,7 @@ function HH_model(du,u,p,t)
 
     # Update cell membrane voltage, Vm
     du[4] = (I_inj(t)  + (V_Na - Vm)*G_Na + (V_K - Vm)*G_K + (V_L - Vm)*G_L)/C_m
+    println(α_n(V_diff))
 end
 
 ## Run Model:
@@ -47,6 +56,7 @@ tspan = (0.0,50.0)
 prob = ODEProblem(HH_model, u0, tspan)
 sol = solve(prob, saveat=0.1)
 
+sol[4,:]
 ## Plotting
 p1 = plot(sol.t, sol[4,:], legend=false, lw=2, ylabel="Voltage [mV]")
 p2 = plot(sol.t, I_inj.(sol.t), legend=false, lc=:red, lw=2, ylabel="Current")
