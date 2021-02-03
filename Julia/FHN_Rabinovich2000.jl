@@ -1,7 +1,8 @@
-Pkg.add("DifferentialEquations")
+#Pkg.add("DifferentialEquations")
 using DifferentialEquations
-using Plots; #pyplot()
+using Plots #pyplot()
 using MultivariateStats
+
 
 function step_G(x)
   if x <= 0
@@ -42,26 +43,24 @@ p = [0.08,-1.5,0.15,0.7, 0.8, 3.1]
 prob_1 = ODEProblem(fitzhugh_nagumo,u0,tspan,p, saveat =dt)
 
 #solution
-sol = solve(prob_1)
+sol = solve(prob_1, reltol = 1e-10)
 u_s = Array(sol)
 
 
 #plotting solutions
-plot(sol)
+#plot(sol)
 #savefig("solutions.png")
 
 ##### Performing PCA
 
 pca_fit = fit(PCA, u_s; maxoutdim = 3)
-
 result = transform(pca_fit, u_s)
-
 
 # PCA plot
 plot(result[1,:], result[2,:], result[3,:])
 #plot(result1, result2, result3)
 #plot(u_s[1,:], u_s[3,:], u_s[5,:])
-savefig("phase_portraitFHN.png")
+savefig("phase_portraitFHN.pdf")
 
 """
 dres1 = vcat([result[1, i+1] - result[1,i] for i in 1:size(u_s)[2] -1], 0)
