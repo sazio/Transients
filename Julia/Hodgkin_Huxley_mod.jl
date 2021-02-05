@@ -1,7 +1,8 @@
-using DifferentialEquations
-using Plots
-using SciPy
+using DifferentialEquations # diff eqs solvers
+using Plots # regular plotting library
+using SciPy # for peak finding --> Freq vs I_stim plot
 using ProgressBars
+using MultivariateStats # for PCA
 
 ## Function Definitions
 α_n(dV) = @. (0.1 - 0.01*dV)/(exp(1 - 0.1*dV)- 1)
@@ -104,21 +105,34 @@ prob = ODEProblem(HH_model, u0, tspan)
 sol = solve(prob, saveat = 0.01, reltol = 1e-10,abstol = 1e-8, progress = true)
 
 ## Plotting
-p1 = plot(sol.t, sol[5,:], legend=false, lw=2, ylabel="Voltage [mV]")
-p2 = plot!(sol.t, sol[10,:], legend=false, lw=2, ylabel="Voltage [mV]")
-p3 = plot!(sol.t, sol[15,:], legend=false, lw=2, ylabel="Voltage [mV]")
+p1 = plot(sol.t, sol[5,:], legend=false, lw=2, ylabel="Released Neurotransmitters %")
+p2 = plot!(sol.t, sol[10,:], legend=false, lw=2, ylabel="Released Neurotransmitters %")
+p3 = plot!(sol.t, sol[15,:], legend=false, lw=2, ylabel="Released Neurotransmitters %")
 #pall = plot(sol[5,:], sol[10,:], sol[15,:])
 #savefig("3Rate_WLC.png")
 
 p_1 = plot(sol.t, sol[16,:], legend=false, lw=2, ylabel="Voltage [mV]")
 p_2 = plot!(sol.t, sol[17,:], legend=false, lw=2, ylabel="Voltage [mV]")
 p_3 = plot!(sol.t, sol[18,:], legend=false, lw=2, ylabel="Voltage [mV]")
-p_all = plot(sol[16,:], sol[17,:], sol[18,:])
+#p_all = plot(sol[16,:], sol[17,:], sol[18,:])
 #plot(p_1,p_2,p_3, layout = (3,1))
 #savefig("3HH_WLC.png")
 
 #p2 = plot(sol.t, I_inj.(sol.t), legend=false, lc=:red, lw=2, ylabel="Current")
 #p3 = plot(sol.t, sol[1:3,:]', label=["n" "m" "h"], legend=:topright, lw=2, xlabel="Time [ms]", ylabel="Fraction Active")
+
+## 3D dimensionality reduction through PCA
+
+u_s = Array(sol)
+
+##### Performing PCA
+pca_fit = fit(PCA, u_s; maxoutdim = 3)
+result = transform(pca_fit, u_s)
+
+# PCA plot
+plot(result[1,:], result[2,:], result[3,:])
+#savefig("phase_portrait_3HH.pdf")
+
 
 ## Frequency-Current curves
 
